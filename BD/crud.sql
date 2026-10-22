@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS dam2_db;ç
+
+USE dam2_db;
+
 -- Exercici 1: Creació de la taula Professors
 CREATE TABLE IF NOT EXISTS Professors (
     id INT AUTO_INCREMENT PRIMARY KEY,
