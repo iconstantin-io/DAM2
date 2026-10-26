@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
+import org.example.View.ProfessorView;
 
 public class Main {
     static void main(String[] args) {
@@ -39,6 +40,7 @@ public class Main {
 
     public static void menuProfessors(Scanner sc) {
 
+        ProfessorView professorView = new ProfessorView();
         int opcioProfessors;
 
         do {
@@ -51,10 +53,11 @@ public class Main {
             System.out.print("Tria una opció: ");
 
             opcioProfessors = sc.nextInt();
+            sc.nextLine();
 
             switch (opcioProfessors) {
                 case 1:
-                    System.out.println("Alta professor (pendent)");
+                    professorView.demanaProfessor(sc);
                     break;
                 case 2:
                     System.out.println("Llistar professors (pendent)");
