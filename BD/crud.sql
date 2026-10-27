@@ -15,16 +15,21 @@ INSERT INTO Professors (nom, cognoms) VALUES
     ('Maria', 'López Fernández'),
     ('Carles', 'Sánchez Pujol');
 
--- Exercici 4: Creació de la taula ModulProfessional
-CREATE TABLE IF NOT EXISTS ModulProfessional (
+-- Exercici 4: taula ModulsProfessionals
+
+-- Esborrem la taula antiga que no seguia l'enunciat
+DROP TABLE IF EXISTS ModulProfessional;
+
+-- Creem la taula nova
+CREATE TABLE IF NOT EXISTS ModulsProfessionals (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
-    hores INT NOT NULL,
     id_professor INT,
     FOREIGN KEY (id_professor) REFERENCES Professors(id) ON DELETE SET NULL
-    );
+);
 
--- Inserció de mòduls d'exemple
-INSERT INTO ModulProfessional (nom, hores, id_professor) VALUES
-    ('Accés a Dades', 120, 1),
-    ('Desenvolupament d Interfaces', 90, 2);
+-- 3 mòduls d'exemple
+INSERT INTO ModulsProfessionals (nom, id_professor) VALUES
+    ('Accés a Dades', 1),
+    ('Programació de serveis', 2),
+    ('Programació multimèdia', 3);
