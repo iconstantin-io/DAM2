@@ -60,13 +60,13 @@ public class Main {
                     professorView.demanaProfessor(sc);
                     break;
                 case 2:
-                    System.out.println("Llistar professors (pendent)");
+                    professorView.llistarProfessors();
                     break;
                 case 3:
-                    System.out.println("Actualitzar professor (pendent)");
+                    professorView.actualitzarProfessor(sc);
                     break;
                 case 4:
-                    System.out.println("Eliminar professor (pendent)");
+                    professorView.eliminarProfessor(sc);
                     break;
                 case 5:
                     System.out.println("Tornant al menú principal...");
