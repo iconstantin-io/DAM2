@@ -8,6 +8,7 @@ public class ProfessorController {
 
     private ProfessorDAO professorDAO = new ProfessorDAOImpl();
 
+    //Hola?
     public void altaProfesso(Professor professor) {
         professorDAO.addDam2(professor);
     }
