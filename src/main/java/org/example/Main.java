@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 import org.example.View.ProfessorView;
+import org.example.View.ModulProfessionalView;
 
 public class Main {
     static void main(String[] args) {
@@ -81,6 +82,7 @@ public class Main {
 
     public static void menuModuls(Scanner sc) {
 
+        ModulProfessionalView modulView = new ModulProfessionalView();
         int opcioModuls;
 
         do {
@@ -93,19 +95,20 @@ public class Main {
             System.out.print("Tria una opció: ");
 
             opcioModuls = sc.nextInt();
+            sc.nextLine();
 
             switch (opcioModuls) {
                 case 1:
-                    System.out.println("Alta mòdul (pendent)");
+                    modulView.demanaModul(sc);
                     break;
                 case 2:
-                    System.out.println("Llistar mòduls (pendent)");
+                    modulView.llistarModuls();
                     break;
                 case 3:
-                    System.out.println("Actualitzar mòdul (pendent)");
+                    modulView.actualitzarModul(sc);
                     break;
                 case 4:
-                    System.out.println("Eliminar mòdul (pendent)");
+                    modulView.eliminarModul(sc);
                     break;
                 case 5:
                     System.out.println("Tornant al menú principal...");
